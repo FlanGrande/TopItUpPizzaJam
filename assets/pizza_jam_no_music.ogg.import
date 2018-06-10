@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pizza_jam_no_music.ogg-a41da4355f6aaa35271285af632ddd57.oggstr"
+
+[deps]
+
+source_file="res://assets/pizza_jam_no_music.ogg"
+source_md5="4e04f1fa5733ee308d29ed7edf91146b"
+
+dest_files=[ "res://.import/pizza_jam_no_music.ogg-a41da4355f6aaa35271285af632ddd57.oggstr" ]
+dest_md5="27c1fdf5b358bec128c80355c7e2097c"
+
+[params]
+
+loop=true
+loop_offset=0

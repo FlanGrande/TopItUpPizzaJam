@@ -3,18 +3,16 @@ extends KinematicBody2D
 onready var globals = get_node("/root/global")
 onready var gameview = preload("res://scenes/GameView.tscn")
 onready var topping = preload("res://scenes/topping.tscn")
-var pepperoni = preload("res://assets/pepperoni.jpg")
-var green_pepper = preload("res://assets/green_pepper.jpg")
 
 # Player variables
 const MOVEMENT_SPEED = 600
 const ACCELERATION = 1
 const DIAGONAL_FRICTION = 0.75
+const LOCKED_TIME = 240
+var lock_time = LOCKED_TIME
 var speed = Vector2(0, 0)
-var lock_time = 240
 
 # Topping variables
-var ingredients = [pepperoni, green_pepper]
 export var current_ingredient = 0
 
 
@@ -47,7 +45,7 @@ func _process(delta):
 	else:
 		lock_time -= 1
 	
-	get_node("ToppingSpr").set_texture(ingredients[current_ingredient])
+	get_node("ToppingSpr").set_texture(globals.ingredients[current_ingredient])
 	
 	if(Input.is_action_just_released("ui_page_up")):
 		change_topping_up()
@@ -74,15 +72,20 @@ func place_topping():
 	tmpTopping.current_ingredient = tmpType
 	tmpTopping.set_position(tmp2DVector)
 	globals.toppingsPlayerPlaced[globals.numberOfToppings - globals.remainingToppings] = {"type": tmpType, "pos": tmp2DVector}
-	globals.remainingToppings -= 1
+	globals.remainingToppings -= 1	
 	get_node("..").add_child(tmpTopping)
+	
+	if(globals.remainingToppings <= 0):
+		set_position(Vector2(722, 456))
+		lock_time = LOCKED_TIME
+		
 	
 func change_topping_up():
 	current_ingredient += 1
-	if(current_ingredient >= ingredients.size()):
+	if(current_ingredient >= globals.ingredientsAvailable):
 		current_ingredient = 0
 
 func change_topping_down():
 	current_ingredient -= 1
 	if(current_ingredient < 0):
-		current_ingredient = ingredients.size() - 1
+		current_ingredient = globals.ingredientsAvailable - 1

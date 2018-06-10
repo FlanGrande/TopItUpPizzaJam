@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/topping.gd" type="Script" id=1]
-[ext_resource path="res://assets/pepperoni.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/silami.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -25,7 +25,7 @@ tracks/0/keys = {
 [node name="Topping" type="Node2D"]
 
 modulate = Color( 1, 1, 1, 0 )
-scale = Vector2( 0.15, 0.15 )
+scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 current_ingredient = 0

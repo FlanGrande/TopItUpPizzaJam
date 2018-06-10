@@ -1,5 +1,312 @@
-[gd_scene format=2]
+[gd_scene load_steps=15 format=2]
 
-[node name="Node" type="Node"]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/base.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Menu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/bacon.png" type="Texture" id=4]
+[ext_resource path="res://assets/yellow_pepper.png" type="Texture" id=5]
+[ext_resource path="res://assets/green_pepper.png" type="Texture" id=6]
+[ext_resource path="res://assets/red_pepper.png" type="Texture" id=7]
+[ext_resource path="res://assets/mushroom.png" type="Texture" id=8]
+[ext_resource path="res://assets/tomato.png" type="Texture" id=9]
+[ext_resource path="res://assets/bluefish.png" type="Texture" id=10]
+[ext_resource path="res://assets/pineapple.png" type="Texture" id=11]
+[ext_resource path="res://fonts/Menu2.tres" type="DynamicFont" id=12]
+[ext_resource path="res://scenes/Menu2.tres" type="DynamicFont" id=13]
+[ext_resource path="res://assets/pizza_jam_no_music.ogg" type="AudioStream" id=14]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+[node name="pizza_bg" type="Sprite" parent="." index="0"]
+
+position = Vector2( 722, 456 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="text" type="Node2D" parent="." index="1"]
+
+position = Vector2( 722, 456 )
+_sections_unfolded = [ "Material", "Transform", "Z Index" ]
+
+[node name="Play" type="Label" parent="text" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -380.0
+margin_top = -200.0
+margin_right = 420.0
+margin_bottom = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.588235 )
+custom_constants/shadow_as_outline = 30
+text = "Play!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Rect", "Visibility", "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="text/Play" index="0"]
+
+position = Vector2( 142, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Sprite2" type="Sprite" parent="text/Play" index="1"]
+
+position = Vector2( 660, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="HowToPlay" type="Label" parent="text" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -380.0
+margin_top = -100.0
+margin_right = 420.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.588235 )
+custom_constants/shadow_as_outline = 30
+text = "How to play"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Material", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Sprite3" type="Sprite" parent="text/HowToPlay" index="0"]
+
+visible = false
+position = Vector2( 142, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Sprite4" type="Sprite" parent="text/HowToPlay" index="1"]
+
+visible = false
+position = Vector2( 660, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="Credits" type="Label" parent="text" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -380.0
+margin_right = 420.0
+margin_bottom = 100.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.588235 )
+custom_constants/shadow_as_outline = 30
+text = "Credits"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Material", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Sprite5" type="Sprite" parent="text/Credits" index="0"]
+
+visible = false
+position = Vector2( 142, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite6" type="Sprite" parent="text/Credits" index="1"]
+
+visible = false
+position = Vector2( 660, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Exit" type="Label" parent="text" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -380.0
+margin_top = 100.0
+margin_right = 420.0
+margin_bottom = 200.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.588235 )
+custom_constants/shadow_as_outline = 30
+text = "Exit"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "Material", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Sprite7" type="Sprite" parent="text/Exit" index="0"]
+
+visible = false
+position = Vector2( 142, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite8" type="Sprite" parent="text/Exit" index="1"]
+
+visible = false
+position = Vector2( 660, 55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="HowToPlayText" type="Label" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1440.0
+margin_bottom = 900.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.196078 )
+custom_constants/shadow_as_outline = 30
+text = "Someone spilled all the toppings of the pizzas
+You can see where the toppings were for a limited time
+Remember their position and which toppings are missing.
+Place them the best you can.
+Feel free to send me a screenshot of your highscore (at)FlanGrande on twitter
+
+Controls for keyboard
+
+Arrow keys                          Move the topping
+Enter or Space:                          Place topping
+Q or E:                     Previous or Next topping
+
+
+Controls for pad
+
+Left Stick or D-Pad                     Move the topping
+A button                                                       Place topping
+Lb or Rb                               Previous or Next topping
+
+Tested with Xbox 360 Controller
+
+Press Escape or B to go back"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="CreditsText" type="Label" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1440.0
+margin_bottom = 900.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.196078 )
+custom_constants/shadow_as_outline = 30
+text = "TopItUp, memory game for the Pizza Jam that runs from Friday June 8th until Sunday the 10th of 2018.
+
+	Programming and music
+		Fran Grande
+	
+	Art:
+		Dominic Butler
+	
+	Fonts by:
+		Des in fontspace
+		Sharkshock in fontspace
+
+
+Press Escape or B to go back"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_constants", "custom_fonts" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 14 )
+volume_db = -16.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

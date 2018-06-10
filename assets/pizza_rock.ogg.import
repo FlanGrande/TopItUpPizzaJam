@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pizza_rock.ogg-909ac7defa0593f6ad4cc1e03b9a93a0.oggstr"
+
+[deps]
+
+source_file="res://assets/pizza_rock.ogg"
+source_md5="a04f16f09f64a108c734c2e4923deffa"
+
+dest_files=[ "res://.import/pizza_rock.ogg-909ac7defa0593f6ad4cc1e03b9a93a0.oggstr" ]
+dest_md5="a594a4f1693f0c5f21d79fe76dd52e4e"
+
+[params]
+
+loop=true
+loop_offset=0
